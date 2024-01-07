@@ -48,7 +48,7 @@ struct ContentView: View {
                     }.pickerStyle(.navigationLink)
                 }
                 Section("Total Amount"){
-                    Text(totalAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Text(totalAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD")).foregroundColor(tipPercentage == 0 ? .red : .primary)
                 }
                 Section("Amount per person"){
                     Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
