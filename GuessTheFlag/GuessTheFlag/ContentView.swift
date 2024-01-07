@@ -37,7 +37,7 @@ struct ContentView: View {
                                 .font(.subheadline.weight(.heavy))
 
                             Text(countries[correctAnswer])
-                                .font(.largeTitle.weight(.semibold))
+                                .titleStyle()
                         }
 
                         ForEach(0..<3) { number in
@@ -113,6 +113,20 @@ struct ContentView: View {
                 .clipShape(.capsule)
                 .shadow(radius: 5)
         }
+    }
+    
+    
+}
+struct Title: ViewModifier{
+    func body(content: Content) -> some View{
+        content.font(.largeTitle)
+            .foregroundStyle(.blue)
+        }
+    }
+
+extension View {
+    func titleStyle() -> some View {
+        modifier(Title())
     }
 }
 
