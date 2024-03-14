@@ -13,10 +13,11 @@ struct ContentView: View {
     @State private var rateOfInterest = 0.02875
     @State private var loanTermInYears = 30
     
-    func getTotalInterest(principal: Double,M: Double, r: Double)-> Double {
+    func dumpPayments(principal: Double,M: Double, r: Double) {
         var starting_balance = 0.0
         let a = (1.0 + r)
         var total_int = 0.0
+        var payments = [Int: Payment]()
         for i in 0..<360{
             if (i == 0){
                 starting_balance = principal
@@ -26,12 +27,10 @@ struct ContentView: View {
             
             let interestAmount = starting_balance * r
             let ending_balance = starting_balance < M ? 0.0 : roundToTwoDecimal(starting_balance * a - M)
-            total_int = total_int + interestAmount
-            
-            //            print("Month \(i+1) - \(roundToTwoDecimal(starting_balance))(BB) - \(roundToTwoDecimal(interestAmount))(I) - \(roundToTwoDecimal(M-interestAmount))(P) - \(balance)(EB) ")
+            payments[i] = Payment(principal: roundToTwoDecimal(M - interestAmount), interest: roundToTwoDecimal(interestAmount), endingBalance: roundToTwoDecimal(ending_balance))
         }
-        print("BB = Begining Balance, I = Interest, P = Principal, EB = Ending Balance")
-        return roundToTwoDecimal(total_int)
+        
+        dump(payments.sorted(by:  { $0.0 < $1.0 }))
     }
     
     func roundToTwoDecimal(_ value: Double) -> Double {return round(value * 100)/100.0}
@@ -88,13 +87,25 @@ struct ContentView: View {
                     
                 }
                 Button("View amortization table"){
-                    
+                    dumpPayments(principal: loanAmount, M: monthlyPayment, r: r)
                 }
                     
             }
             .navigationTitle("Loan Calculator").navigationBarTitleDisplayMode(.inline)
         }.preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
         
+    }
+}
+
+class Payment {
+    let principal: Double
+    let interest: Double
+    let endingBalance: Double
+
+    init(principal: Double, interest: Double, endingBalance: Double) {
+        self.principal = principal
+        self.interest = interest
+        self.endingBalance = endingBalance
     }
 }
 
