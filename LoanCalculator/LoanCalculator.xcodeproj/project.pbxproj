@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4209A3C2BB729DA0092174A /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4209A3B2BB729DA0092174A /* PaymentView.swift */; };
+		A4209A3E2BB87CDE0092174A /* LoanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4209A3D2BB87CDE0092174A /* LoanView.swift */; };
+		A4209A402BB87CFD0092174A /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4209A3F2BB87CFD0092174A /* Payment.swift */; };
+		A4209A442BB8EC750092174A /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4209A432BB8EC750092174A /* Loan.swift */; };
 		A4CEEFFB2B5B65FA004774C5 /* LoanCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEEFFA2B5B65FA004774C5 /* LoanCalculatorApp.swift */; };
 		A4CEEFFD2B5B65FA004774C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CEEFFC2B5B65FA004774C5 /* ContentView.swift */; };
 		A4CEEFFF2B5B65FC004774C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4CEEFFE2B5B65FC004774C5 /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4209A3B2BB729DA0092174A /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		A4209A3D2BB87CDE0092174A /* LoanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanView.swift; sourceTree = "<group>"; };
+		A4209A3F2BB87CFD0092174A /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		A4209A432BB8EC750092174A /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		A4CEEFF72B5B65FA004774C5 /* LoanCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoanCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CEEFFA2B5B65FA004774C5 /* LoanCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanCalculatorApp.swift; sourceTree = "<group>"; };
 		A4CEEFFC2B5B65FA004774C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +63,10 @@
 				A4CEEFFC2B5B65FA004774C5 /* ContentView.swift */,
 				A4CEEFFE2B5B65FC004774C5 /* Assets.xcassets */,
 				A4CEF0002B5B65FC004774C5 /* Preview Content */,
+				A4209A3B2BB729DA0092174A /* PaymentView.swift */,
+				A4209A3D2BB87CDE0092174A /* LoanView.swift */,
+				A4209A3F2BB87CFD0092174A /* Payment.swift */,
+				A4209A432BB8EC750092174A /* Loan.swift */,
 			);
 			path = LoanCalculator;
 			sourceTree = "<group>";
@@ -138,7 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4CEEFFD2B5B65FA004774C5 /* ContentView.swift in Sources */,
+				A4209A442BB8EC750092174A /* Loan.swift in Sources */,
+				A4209A3C2BB729DA0092174A /* PaymentView.swift in Sources */,
+				A4209A3E2BB87CDE0092174A /* LoanView.swift in Sources */,
 				A4CEEFFB2B5B65FA004774C5 /* LoanCalculatorApp.swift in Sources */,
+				A4209A402BB87CFD0092174A /* Payment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +288,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LoanCalculator/Preview Content\"";
+				DEVELOPMENT_TEAM = VP7GH49GF8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LoanCalculator/Preview Content\"";
+				DEVELOPMENT_TEAM = VP7GH49GF8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
